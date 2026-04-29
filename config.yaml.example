@@ -1,0 +1,38 @@
+# redex configuration
+# Copy to config.yaml and fill in your Reddit credentials
+
+reddit:
+  # Get from https://www.reddit.com/prefs/apps
+  client_id: "YOUR_CLIENT_ID"
+  client_secret: "YOUR_CLIENT_SECRET"
+  username: "YOUR_REDDIT_USERNAME"
+  password: "YOUR_REDDIT_PASSWORD"
+  user_agent: "redex/0.1.0"
+
+archive:
+  # Subs to auto-sync on `redex sync`
+  default_subs:
+    - "python"
+    - "LocalLLaMA"
+    - "DataHoarder"
+    - "selfhosted"
+
+  # Depth settings
+  post_depth: 100          # number of posts per sub to fetch
+  comment_depth: 10        # max comment nesting to store
+
+  # Storage
+  db_path: "~/.redex/redex.db"
+
+  # Rate limiting (Reddit free tier: 100 QPM)
+  requests_per_minute: 90  # stay under the limit
+
+search:
+  # FTS result limit
+  max_results: 50
+
+  # Semantic search (optional, requires sentence-transformers)
+  semantic:
+    enabled: false
+    model: "sentence-transformers/all-MiniLM-L6-v2"
+    top_k: 10

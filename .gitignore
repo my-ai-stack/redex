@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+uv.lock
+
+# SQLite
+*.db
+
+# Config (contains secrets)
+config.yaml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
