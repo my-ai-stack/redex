@@ -122,7 +122,6 @@ pip install redex[semantic]
 ## 🔗 Links
 
 - **GitHub:** https://github.com/my-ai-stack/redex
-- **HF Space:** (coming soon)
 
 ---
 
